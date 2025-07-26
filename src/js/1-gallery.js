@@ -67,7 +67,7 @@ const images = [
 ];
 const galleryEl = document.querySelector('.gallery');
 
-// Генеруємо розмітку галереї
+
 const markup = images
     .map(({ preview, original, description }) => {
         return `
@@ -84,13 +84,12 @@ const markup = images
     })
     .join('');
 
-// Додаємо до DOM
+
 galleryEl.insertAdjacentHTML('beforeend', markup);
 
-// Ініціалізуємо SimpleLightbox
+
 const lightbox = new SimpleLightbox('.gallery a', {
     captionsData: 'alt',
     captionDelay: 250,
 });
 
-//console.log('hello oleg')
